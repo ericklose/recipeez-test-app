@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A623F03A1C7B91B600C266FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0391C7B91B600C266FC /* AppDelegate.swift */; };
-		A623F03C1C7B91B600C266FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F03B1C7B91B600C266FC /* ViewController.swift */; };
-		A623F03F1C7B91B600C266FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623F03D1C7B91B600C266FC /* Main.storyboard */; };
 		A623F0421C7B91B600C266FC /* recipeez_w_core_data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A623F0401C7B91B600C266FC /* recipeez_w_core_data.xcdatamodeld */; };
 		A623F0441C7B91B600C266FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A623F0431C7B91B600C266FC /* Assets.xcassets */; };
 		A623F0471C7B91B600C266FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623F0451C7B91B600C266FC /* LaunchScreen.storyboard */; };
 		A623F0521C7B91B600C266FC /* recipeez_w_core_dataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0511C7B91B600C266FC /* recipeez_w_core_dataTests.swift */; };
+		A623F05D1C7B91EF00C266FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623F05C1C7B91EF00C266FC /* Main.storyboard */; };
+		A623F05F1C7B91FA00C266FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F05E1C7B91FA00C266FC /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +29,6 @@
 /* Begin PBXFileReference section */
 		A623F0361C7B91B600C266FC /* recipeez w core data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "recipeez w core data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A623F0391C7B91B600C266FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A623F03B1C7B91B600C266FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A623F03E1C7B91B600C266FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A623F0411C7B91B600C266FC /* recipeez_w_core_data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = recipeez_w_core_data.xcdatamodel; sourceTree = "<group>"; };
 		A623F0431C7B91B600C266FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A623F0461C7B91B600C266FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +36,8 @@
 		A623F04D1C7B91B600C266FC /* recipeez w core dataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "recipeez w core dataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A623F0511C7B91B600C266FC /* recipeez_w_core_dataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeez_w_core_dataTests.swift; sourceTree = "<group>"; };
 		A623F0531C7B91B600C266FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A623F05C1C7B91EF00C266FC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A623F05E1C7B91FA00C266FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				A623F0391C7B91B600C266FC /* AppDelegate.swift */,
-				A623F03B1C7B91B600C266FC /* ViewController.swift */,
-				A623F03D1C7B91B600C266FC /* Main.storyboard */,
+				A623F05E1C7B91FA00C266FC /* ViewController.swift */,
+				A623F05C1C7B91EF00C266FC /* Main.storyboard */,
 				A623F0431C7B91B600C266FC /* Assets.xcassets */,
 				A623F0451C7B91B600C266FC /* LaunchScreen.storyboard */,
 				A623F0481C7B91B600C266FC /* Info.plist */,
@@ -182,9 +182,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A623F05D1C7B91EF00C266FC /* Main.storyboard in Resources */,
 				A623F0471C7B91B600C266FC /* LaunchScreen.storyboard in Resources */,
 				A623F0441C7B91B600C266FC /* Assets.xcassets in Resources */,
-				A623F03F1C7B91B600C266FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A623F03C1C7B91B600C266FC /* ViewController.swift in Sources */,
+				A623F05F1C7B91FA00C266FC /* ViewController.swift in Sources */,
 				A623F0421C7B91B600C266FC /* recipeez_w_core_data.xcdatamodeld in Sources */,
 				A623F03A1C7B91B600C266FC /* AppDelegate.swift in Sources */,
 			);
@@ -227,14 +227,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A623F03D1C7B91B600C266FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A623F03E1C7B91B600C266FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A623F0451C7B91B600C266FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
