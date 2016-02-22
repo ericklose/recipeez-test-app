@@ -14,6 +14,10 @@
 		A623F0521C7B91B600C266FC /* recipeez_w_core_dataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0511C7B91B600C266FC /* recipeez_w_core_dataTests.swift */; };
 		A623F05D1C7B91EF00C266FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623F05C1C7B91EF00C266FC /* Main.storyboard */; };
 		A623F05F1C7B91FA00C266FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F05E1C7B91FA00C266FC /* ViewController.swift */; };
+		A623F0651C7B948000C266FC /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0631C7B948000C266FC /* Recipe+CoreDataProperties.swift */; };
+		A623F0661C7B948000C266FC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0641C7B948000C266FC /* Recipe.swift */; };
+		A623F0681C7B959A00C266FC /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0671C7B959A00C266FC /* RecipeCell.swift */; };
+		A623F06A1C7B9AE500C266FC /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0691C7B9AE500C266FC /* CreateRecipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		A623F0531C7B91B600C266FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A623F05C1C7B91EF00C266FC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A623F05E1C7B91FA00C266FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A623F0631C7B948000C266FC /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A623F0641C7B948000C266FC /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
+		A623F0671C7B959A00C266FC /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		A623F0691C7B9AE500C266FC /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +87,10 @@
 		A623F0381C7B91B600C266FC /* recipeez w core data */ = {
 			isa = PBXGroup;
 			children = (
+				A623F0621C7B944D00C266FC /* Controller */,
+				A623F0611C7B944600C266FC /* View */,
+				A623F0601C7B944200C266FC /* Model */,
 				A623F0391C7B91B600C266FC /* AppDelegate.swift */,
-				A623F05E1C7B91FA00C266FC /* ViewController.swift */,
-				A623F05C1C7B91EF00C266FC /* Main.storyboard */,
 				A623F0431C7B91B600C266FC /* Assets.xcassets */,
 				A623F0451C7B91B600C266FC /* LaunchScreen.storyboard */,
 				A623F0481C7B91B600C266FC /* Info.plist */,
@@ -97,6 +106,33 @@
 				A623F0531C7B91B600C266FC /* Info.plist */,
 			);
 			path = "recipeez w core dataTests";
+			sourceTree = "<group>";
+		};
+		A623F0601C7B944200C266FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A623F0631C7B948000C266FC /* Recipe+CoreDataProperties.swift */,
+				A623F0641C7B948000C266FC /* Recipe.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A623F0611C7B944600C266FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A623F05C1C7B91EF00C266FC /* Main.storyboard */,
+				A623F0671C7B959A00C266FC /* RecipeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A623F0621C7B944D00C266FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A623F05E1C7B91FA00C266FC /* ViewController.swift */,
+				A623F0691C7B9AE500C266FC /* CreateRecipeVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +239,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A623F05F1C7B91FA00C266FC /* ViewController.swift in Sources */,
+				A623F0651C7B948000C266FC /* Recipe+CoreDataProperties.swift in Sources */,
 				A623F0421C7B91B600C266FC /* recipeez_w_core_data.xcdatamodeld in Sources */,
+				A623F0681C7B959A00C266FC /* RecipeCell.swift in Sources */,
+				A623F06A1C7B9AE500C266FC /* CreateRecipeVC.swift in Sources */,
 				A623F03A1C7B91B600C266FC /* AppDelegate.swift in Sources */,
+				A623F0661C7B948000C266FC /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +426,7 @@
 				A623F0581C7B91B600C266FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A623F0591C7B91B600C266FC /* Build configuration list for PBXNativeTarget "recipeez w core dataTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +435,7 @@
 				A623F05B1C7B91B600C266FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

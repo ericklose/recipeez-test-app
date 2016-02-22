@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WGk-C9-bHE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WGk-C9-bHE">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="n5N-IL-A99">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="104" id="n5N-IL-A99" customClass="RecipeCell" customModule="recipeez_w_core_data" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n5N-IL-A99" id="Qp6-lm-IjH">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="103"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4r-To-gKC">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4r-To-gKC">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="103"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mom's Happy Hamburger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH7-Ee-kc0">
@@ -61,6 +61,10 @@
                                                 <constraint firstItem="oH7-Ee-kc0" firstAttribute="centerY" secondItem="Qp6-lm-IjH" secondAttribute="centerY" id="v7m-mW-DhG"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recipeImg" destination="d4r-To-gKC" id="u45-F8-zek"/>
+                                            <outlet property="recipeTitle" destination="oH7-Ee-kc0" id="ezN-Dq-Lkh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -89,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="1235" y="429"/>
         </scene>
-        <!--View Controller-->
+        <!--Create RecipeVC-->
         <scene sceneID="Pov-nA-K38">
             <objects>
-                <viewController id="sgE-LD-HvD" sceneMemberID="viewController">
+                <viewController id="sgE-LD-HvD" customClass="CreateRecipeVC" customModule="recipeez_w_core_data" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5GY-1k-F7d"/>
                         <viewControllerLayoutGuide type="bottom" id="kye-Ae-vbN"/>
@@ -125,21 +129,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-fA-0Qr">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-Rb-I3l">
+                                <rect key="frame" x="252" y="502" width="97" height="30"/>
+                                <state key="normal" title="Create Recipe"/>
+                                <connections>
+                                    <action selector="createRecipe:" destination="sgE-LD-HvD" eventType="touchUpInside" id="74u-NL-ZNb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHo-3A-Vxq">
+                                <rect key="frame" x="259" y="340" width="83" height="73"/>
+                                <state key="normal" title="ADD RECIPE"/>
+                                <connections>
+                                    <action selector="addImage:" destination="sgE-LD-HvD" eventType="touchUpInside" id="iuL-OW-0JD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-fA-0Qr">
                                 <rect key="frame" x="213" y="289" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="Nsi-3I-bpA"/>
                                     <constraint firstAttribute="height" constant="175" id="i2J-yL-iLW"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-Rb-I3l">
-                                <rect key="frame" x="252" y="502" width="97" height="30"/>
-                                <state key="normal" title="Create Recipe"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHo-3A-Vxq">
-                                <rect key="frame" x="259" y="340" width="83" height="73"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -162,6 +172,12 @@
                             <constraint firstItem="Nxv-yy-k3c" firstAttribute="trailing" secondItem="QS4-cl-950" secondAttribute="trailingMargin" id="yFq-La-Ghr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recipeImg" destination="jbM-fA-0Qr" id="2dP-pg-UCu"/>
+                        <outlet property="recipeIngredients" destination="frd-TH-nKc" id="td9-SD-PwU"/>
+                        <outlet property="recipeSteps" destination="Nxv-yy-k3c" id="ThS-1B-Dcg"/>
+                        <outlet property="recipeTitle" destination="eZp-kU-Q60" id="LUA-Kq-gAM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBl-48-MfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,4 +203,7 @@
             <point key="canvasLocation" x="553" y="1089"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="barrel-water-bridge" width="550" height="440"/>
+    </resources>
 </document>
